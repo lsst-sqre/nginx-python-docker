@@ -8,11 +8,16 @@ By using the HTTP socket it's easy for an nginx container to talk to another uWS
 
 ## Image tags
 
-### compose
+### sqrelsst/nginx-python:compose
 
 Use this image with Docker Compose.
 This image configures nginx to work with a uWSGI server over the `uwsgi:3031` HTTP socket.
 The `uwsgi` hostname should be set on the uWSGI+App container via Docker Compose.
+
+### sqrelsst/nginx-python:k8s
+
+Use this image with Kubernetes.
+On this image, nginx is configured to talk to uWSGI over a `127.0.0.1:3031` HTTP socket since containers in Kubernetes pods all share host network.
 
 ## Prior art
 
