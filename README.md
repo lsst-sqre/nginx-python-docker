@@ -3,11 +3,16 @@
 This is an [nginx](http://nginx.org) Docker image built upon the [python:3.5.1 official Python image](https://hub.docker.com/_/python/).
 Building nginx upon Python helps save space when deploying nginx with a uWSGI-based Python application that uses the same base image.
 
-## Usage notes
-
-This image configures nginx to work with a uWSGI server over the `uwsgi:3031` HTTP socket.
-The `uwsgi` hostname should be set on the uWSGI+App container by an orchestration tool (docker compose can do this via *services*).
+This image configures nginx to work with a uWSGI server on an HTTP socket over `3031` port.
 By using the HTTP socket it's easy for an nginx container to talk to another uWSGI+app container.
+
+## Image tags
+
+### compose
+
+Use this image with Docker Compose.
+This image configures nginx to work with a uWSGI server over the `uwsgi:3031` HTTP socket.
+The `uwsgi` hostname should be set on the uWSGI+App container via Docker Compose.
 
 ## Prior art
 
