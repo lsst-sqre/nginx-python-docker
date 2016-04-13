@@ -25,7 +25,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 # Copy the modified Nginx conf
 COPY nginx.conf /etc/nginx/conf.d/
 
-EXPOSE 80
+EXPOSE 8080
 
 # Run nginx in foreground to keep the container alive
 # Note that nginx alraedy runs itself as non-root

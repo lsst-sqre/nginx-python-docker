@@ -18,6 +18,7 @@ The `uwsgi` hostname should be set on the uWSGI+App container via Docker Compose
 
 Use this image with Kubernetes.
 On this image, nginx is configured to talk to uWSGI over a `127.0.0.1:3031` HTTP socket since containers in Kubernetes pods all share host network.
+The nginx container listens on 8080 because we assume that another service will terminate SSL.
 
 ## Prior art
 
